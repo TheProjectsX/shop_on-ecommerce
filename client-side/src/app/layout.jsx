@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import "./globals.css";
 
 // Components
@@ -13,7 +14,8 @@ export default function RootLayout({ children }) {
         <html lang="en">
             <body className={`font-poppins`}>
                 <Navbar />
-                <div>{children}</div>
+                <div className="mb-6">{children}</div>
+                <Footer />
             </body>
         </html>
     );
