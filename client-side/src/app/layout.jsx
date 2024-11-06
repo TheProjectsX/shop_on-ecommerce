@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
         <html lang="en">
             <body className={`font-poppins`}>
                 <Navbar />
-                <div className="mb-6">{children}</div>
+                <main className="mb-6 max-width">{children}</main>
                 <Footer />
             </body>
         </html>
