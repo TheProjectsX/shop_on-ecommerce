@@ -9,7 +9,7 @@ import { IoSearchOutline } from "react-icons/io5";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { FiMenu } from "react-icons/fi";
 
-const Navbar = () => {
+const Navbar = ({ setDrawerOpened }) => {
     const [navOpened, setNavOpened] = useState(false);
     const pathname = usePathname();
 
@@ -34,12 +34,12 @@ const Navbar = () => {
 
     return (
         <nav className="max-width py-5 sm:py-6">
-            <div className="flex justify-between gap-4">
+            <div className="flex items-center justify-between gap-4">
                 <Link href={"/"} className="text-2xl font-semibold font-inter">
                     ShopOn
                 </Link>
                 {/* Nav Links */}
-                <ul className="hidden md:flex gap-2">
+                <ul className="hidden lg:flex gap-2">
                     {navLinks.map((item) => (
                         <li
                             key={item.href}
@@ -54,13 +54,24 @@ const Navbar = () => {
                             </Link>
                         </li>
                     ))}
+                    <li
+                        className={`h-fit relative
+                                     transform transition-transform duration-200 hover:translate-x-1
+                            `}
+                    >
+                        <button
+                            onClick={(e) => setDrawerOpened((prev) => !prev)}
+                        >
+                            Categories
+                        </button>
+                    </li>
                 </ul>
 
                 {/* Controls */}
                 <div className="flex gap-5">
                     <form
                         onSubmit={(e) => e.preventDefault()}
-                        className="hidden md:flex items-center gap-2 bg-[#F5F5F5] py-2 overflow-hidden rounded-sm"
+                        className="hidden lg:flex items-center gap-2 bg-[#F5F5F5] py-2 overflow-hidden rounded-sm"
                     >
                         <input
                             type="text"
@@ -79,7 +90,7 @@ const Navbar = () => {
                     </button>
 
                     <button
-                        className="text-2xl active:scale-[.80] transition-transform md:hidden"
+                        className="text-2xl active:scale-[.80] transition-transform lg:hidden"
                         onClick={() => setNavOpened((prev) => !prev)}
                     >
                         <FiMenu />
@@ -89,7 +100,7 @@ const Navbar = () => {
 
             {/* For small devices */}
             <div
-                className={`grid md:hidden transition-[grid-template-rows] duration-300 ${
+                className={`grid lg:hidden transition-[grid-template-rows] duration-300 ${
                     navOpened ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
                 }`}
             >
@@ -110,6 +121,19 @@ const Navbar = () => {
                                 </Link>
                             </li>
                         ))}
+                        <li
+                            className={`h-fit relative
+                                     transform transition-transform duration-200 hover:translate-x-1
+                            `}
+                        >
+                            <button
+                                onClick={(e) =>
+                                    setDrawerOpened((prev) => !prev)
+                                }
+                            >
+                                Categories
+                            </button>
+                        </li>
                     </ul>
 
                     {/* Controls */}
