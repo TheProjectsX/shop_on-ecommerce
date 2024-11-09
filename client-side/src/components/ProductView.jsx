@@ -1,23 +1,44 @@
 import { FaRegHeart } from "react-icons/fa";
 import { MdOutlineShoppingCart } from "react-icons/md";
+
+import { MdDeleteOutline } from "react-icons/md";
 import Link from "next/link";
-const ProductView = ({ data }) => {
+
+const ProductView = ({ data, wishlist = false }) => {
     return (
         <div className="relative w-[270px]">
             {/* Controls */}
-            <button
-                className="absolute right-3 top-4 bg-white p-2 rounded-full shadow-lg"
-                title="Add to wishlist"
-            >
-                <FaRegHeart />
-            </button>
-            <button
-                className="absolute right-3 top-14 bg-white p-2 rounded-full shadow-lg"
-                title="Add to Cart"
-            >
-                <MdOutlineShoppingCart />
-            </button>
-            <div className="mb-3 w-[270px] h-[250px] bg-[#F5F5F5] flex justify-center items-center">
+
+            {/* Regular Controls */}
+
+            <div>
+                {!wishlist && (
+                    <button
+                        className="absolute right-3 top-4 bg-white p-2 rounded-full shadow-lg"
+                        title="Add to wishlist"
+                    >
+                        <FaRegHeart />
+                    </button>
+                )}
+
+                {wishlist && (
+                    <button
+                        className="absolute right-3 top-4 bg-white p-2 rounded-full shadow-lg"
+                        title="Remove from wishlist"
+                    >
+                        <MdDeleteOutline />
+                    </button>
+                )}
+
+                <button
+                    className="absolute right-3 top-14 bg-white p-2 rounded-full shadow-lg"
+                    title="Add to Cart"
+                >
+                    <MdOutlineShoppingCart />
+                </button>
+            </div>
+
+            <div className="mb-3 w-[270px] h-[250px] bg-[#F5F5F5] flex flex-col justify-center items-center">
                 <Link href={"#"}>
                     <img
                         src="https://placehold.co/190x180"
