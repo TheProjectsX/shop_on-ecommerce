@@ -33,7 +33,7 @@ const Navbar = ({ setDrawerOpened }) => {
     ];
 
     return (
-        <nav className="max-width py-5 sm:py-6">
+        <nav className="max-width py-4 mb-6 border-b">
             <div className="flex items-center justify-between gap-4">
                 <Link href={"/"} className="text-2xl font-semibold font-inter">
                     ShopOn
