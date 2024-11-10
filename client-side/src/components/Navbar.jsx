@@ -19,7 +19,7 @@ const Navbar = ({ setDrawerOpened }) => {
             label: "Home",
         },
         {
-            href: "/contact",
+            href: "/contact-us",
             label: "Contact",
         },
         {
