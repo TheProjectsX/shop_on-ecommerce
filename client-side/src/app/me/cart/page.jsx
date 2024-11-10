@@ -33,8 +33,13 @@ const Page = () => {
                             <tr className="border-b border-dashed last:border-none">
                                 <td
                                     scope="row"
-                                    className="py-5 font-medium whitespace-nowrap"
+                                    className="py-5 font-medium whitespace-nowrap flex items-center justify-center gap-4"
                                 >
+                                    <img
+                                        src="https://placehold.co/40"
+                                        alt="Placeholder"
+                                        className="size-12"
+                                    />
                                     LCD Monitor
                                 </td>
                                 <td scope="row" className="py-5 px-4">
@@ -50,8 +55,13 @@ const Page = () => {
                             <tr className="border-b border-dashed last:border-none">
                                 <td
                                     scope="row"
-                                    className="py-5 font-medium whitespace-nowrap"
+                                    className="py-5 font-medium whitespace-nowrap flex items-center justify-center gap-4"
                                 >
+                                    <img
+                                        src="https://placehold.co/40"
+                                        alt="Placeholder"
+                                        className="size-12"
+                                    />
                                     LCD Monitor
                                 </td>
                                 <td scope="row" className="py-5 px-4">
@@ -67,8 +77,13 @@ const Page = () => {
                             <tr className="border-b border-dashed last:border-none">
                                 <td
                                     scope="row"
-                                    className="py-5 font-medium whitespace-nowrap"
+                                    className="py-5 font-medium whitespace-nowrap flex items-center justify-center gap-4"
                                 >
+                                    <img
+                                        src="https://placehold.co/40"
+                                        alt="Placeholder"
+                                        className="size-12"
+                                    />
                                     LCD Monitor
                                 </td>
                                 <td scope="row" className="py-5 px-4">
