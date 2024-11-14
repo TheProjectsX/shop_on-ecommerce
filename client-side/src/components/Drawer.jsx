@@ -38,6 +38,7 @@ const NavigationDrawer = ({ drawerOpened, setDrawerOpened }) => {
                 <div className="flex flex-col gap-1">
                     {categories.map((item, idx) => (
                         <Link
+                            onClick={(e) => setDrawerOpened(false)}
                             key={idx}
                             href={item.href}
                             className="px-3 py-2 hover:bg-gray-100 rounded-lg active:scale-95 transition-transform duration-200 ease-in-out"
