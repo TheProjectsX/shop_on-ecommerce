@@ -7,6 +7,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { useState } from "react";
 import Drawer from "@/components/Drawer";
+import NextTopLoader from "nextjs-toploader";
 
 export default function RootLayout({ children }) {
     const [drawerOpened, setDrawerIsOpened] = useState(false);
@@ -14,6 +15,7 @@ export default function RootLayout({ children }) {
     return (
         <html lang="en">
             <body className={`font-poppins`}>
+                <NextTopLoader />
                 <Drawer
                     drawerOpened={drawerOpened}
                     setDrawerOpened={setDrawerIsOpened}
